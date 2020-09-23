@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
     private float _startCamRotation;
     private Animator _anim;
+    private PlayerStats _psScript;
 
     //Movement
     public float jumpHeight;
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        _psScript = GetComponent<PlayerStats>();
         
         _anim = GetComponent<Animator>();
         _startCamRotation = cam.eulerAngles.y;
@@ -68,7 +71,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Animate();
-        
+        ChangeStats();
         //Make sure nothing else goes below this
         if (!Input.GetKeyDown(KeyCode.Escape))
         {
@@ -184,11 +187,31 @@ public class PlayerController : MonoBehaviour
     {
         _anim.SetBool(_isSprinting, isSprinting && _direction.magnitude >= 0.1f && _isGrounded);
         _anim.SetBool(_isJumping, !_isGrounded);
-        _anim.SetBool(_isAttacking, Input.GetButtonDown("Attack") && _isGrounded);
-        _anim.SetBool(_isAttacking2, Input.GetButtonDown("Heavy Attack") && _isGrounded);
-        _anim.SetBool(_isBlocking, Input.GetButton("Block") && _isGrounded);
+        _anim.SetBool(_isAttacking, Input.GetButtonDown("Attack") && _isGrounded && _psScript.stamina >= 10f);
+        _anim.SetBool(_isAttacking2, Input.GetButtonDown("Heavy Attack") && _isGrounded && _psScript.stamina >= 15f);
+        _anim.SetBool(_isBlocking, Input.GetButton("Block") && _isGrounded && _psScript.stamina >= 1f);
         //Blend tree variables
         _anim.SetFloat(_velocityX, _direction.x);
         _anim.SetFloat(_velocityZ, _direction.z);
+    }
+
+    private void ChangeStats()
+    {
+        if (_anim.GetBool(_isAttacking))
+        {
+            _psScript.ChunkStamina(10f);
+        }
+        else if (_anim.GetBool(_isAttacking2))
+        {
+            _psScript.ChunkStamina(15f);
+        }
+        else if (_anim.GetBool(_isBlocking))
+        {
+            _psScript.DrainStamina();
+        }
+        else
+        {
+            _psScript.RegenerateStamina();
+        }
     }
 }
