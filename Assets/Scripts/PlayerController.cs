@@ -70,8 +70,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Animate();
-        ChangeStats();
+        if (!PauseMenu.IsPaused)
+        {
+            Animate();
+            ChangeStats();
+        }
+
         //Make sure nothing else goes below this
         if (!Input.GetKeyDown(KeyCode.Escape))
         {
@@ -85,8 +89,11 @@ public class PlayerController : MonoBehaviour
     {
         //shouldMove is set in the animator based on the enter and exit of the attacking animation
         //Make the player not able to move while attacking
-        if(_anim.GetBool(_shouldMove))
+        if (_anim.GetBool(_shouldMove) && !PauseMenu.IsPaused)
+        {
             PlayerMovement();
+        }
+
     }
 
     private void PlayerMovement()
@@ -187,8 +194,8 @@ public class PlayerController : MonoBehaviour
     {
         _anim.SetBool(_isSprinting, isSprinting && _direction.magnitude >= 0.1f && _isGrounded);
         _anim.SetBool(_isJumping, !_isGrounded);
-        _anim.SetBool(_isAttacking, Input.GetButtonDown("Attack") && _isGrounded && _psScript.stamina >= 10f);
-        _anim.SetBool(_isAttacking2, Input.GetButtonDown("Heavy Attack") && _isGrounded && _psScript.stamina >= 15f);
+        _anim.SetBool(_isAttacking, Input.GetButtonDown("Attack") && _isGrounded && _psScript.stamina >= 10f && _anim.GetBool(_shouldMove));
+        _anim.SetBool(_isAttacking2, Input.GetButtonDown("Heavy Attack") && _isGrounded && _psScript.stamina >= 15f && _anim.GetBool(_shouldMove));
         _anim.SetBool(_isBlocking, Input.GetButton("Block") && _isGrounded && _psScript.stamina >= 1f);
         //Blend tree variables
         _anim.SetFloat(_velocityX, _direction.x);

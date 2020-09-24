@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e470174a-9126-4174-972c-c53c6e17fb9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/YBot Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/YBot Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/slash1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/slash1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/slash2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/slash2.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +47,11 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DamageEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -94,6 +97,7 @@
       <workItem from="1600822889605" duration="3655000" />
       <workItem from="1600827881654" duration="1344000" />
       <workItem from="1600900696238" duration="2723000" />
+      <workItem from="1600978229221" duration="1878000" />
     </task>
     <servers />
   </component>
@@ -116,5 +120,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1127" y="613" key="VCS.ChangelistChooser" timestamp="1600979970446">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1127" y="613" key="VCS.ChangelistChooser/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1600979970446" />
+    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1600979852936">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1600979852936" />
   </component>
 </project>
