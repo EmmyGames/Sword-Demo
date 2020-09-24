@@ -25,7 +25,8 @@ public class PlayerStats : MonoBehaviour
     
     public void DrainStamina()
     {
-        stamina -= 10f * Time.deltaTime;
+        //TODO: make the stamina cost a variable probably
+        stamina -= 5f * Time.deltaTime;
         _regenCooldown = 2f;
     }
 

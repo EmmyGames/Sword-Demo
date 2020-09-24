@@ -74,7 +74,7 @@ AnimatorStateMachine:
     m_Position: {x: -310, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9168184309499962690}
-    m_Position: {x: 50, y: 90, z: 0}
+    m_Position: {x: 40, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2610732456161433657}
     m_Position: {x: 330, y: 240, z: 0}
@@ -881,7 +881,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Standing Jump
-  m_Speed: 1.2
+  m_Speed: 1.3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2576991257978688183}
@@ -938,7 +938,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 0629a5da0a43c2d48a001eefc7a5d703, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0.5}
-    m_TimeScale: 1.6
+    m_TimeScale: 1.4
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -946,7 +946,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 477634ea1cfd86b4796cffd48885af76, type: 2}
     m_Threshold: 0.055114638
     m_Position: {x: 0, y: -0.5}
-    m_TimeScale: 1.6
+    m_TimeScale: 1.4
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -954,7 +954,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 2ea6c8bbde9c4b843af6c21d318b2fec, type: 2}
     m_Threshold: 0.110229276
     m_Position: {x: -0.5, y: 0}
-    m_TimeScale: 2
+    m_TimeScale: 1.75
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -962,7 +962,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: b60096a62dc0db34fa3051084fa299e4, type: 2}
     m_Threshold: 0.16534391
     m_Position: {x: 0.5, y: 0}
-    m_TimeScale: 2
+    m_TimeScale: 1.75
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0

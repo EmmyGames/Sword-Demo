@@ -199,11 +199,11 @@ public class PlayerController : MonoBehaviour
     {
         if (_anim.GetBool(_isAttacking))
         {
-            _psScript.ChunkStamina(10f);
+            _psScript.ChunkStamina(5f);
         }
         else if (_anim.GetBool(_isAttacking2))
         {
-            _psScript.ChunkStamina(15f);
+            _psScript.ChunkStamina(10f);
         }
         else if (_anim.GetBool(_isBlocking))
         {
