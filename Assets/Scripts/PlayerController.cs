@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed;
     public float speed;
     private Vector3 _direction;
-
+    private Vector3 _lastDirection;
+    
     private Vector3 _moveDir;
     private float _targetAngle;
     private float _angle;
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerMovement()
     {
+        _lastDirection = _direction;
         _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (_isGrounded && _velocity.y < 0f)
@@ -105,9 +107,9 @@ public class PlayerController : MonoBehaviour
             //Reset the velocity that it had accumulated while on the ground
             _velocity.y = -2f;
         }
-        var moveX = Input.GetAxis("Horizontal");
-        var moveZ = Input.GetAxis("Vertical");
-
+        var moveX = Input.GetAxisRaw("Horizontal");
+        var moveZ = Input.GetAxisRaw("Vertical");
+        
         //only change sprinting bool if grounded. Changing sprinting changes the player rotation and speed
         //which should not happen in midair
         if (_isGrounded)
@@ -125,6 +127,7 @@ public class PlayerController : MonoBehaviour
             _direction = _direction.normalized;
         }
 
+        _direction = GetAxis(_lastDirection, _direction);
         //if not grounded (or most likely jumping), change movement
         if (!_isGrounded)
         {
@@ -142,7 +145,7 @@ public class PlayerController : MonoBehaviour
             
             //Allows the player to have a slight amount of control while in the air determined by jumpControlModifier
             _moveDir += Quaternion.Euler(0f, _targetAngle, 0f) * _direction * (jumpControlModifier * Time.deltaTime);
-            cc.Move(speed * Time.deltaTime * _moveDir.normalized);
+            cc.Move(speed * Time.deltaTime * _moveDir);
         }
         //Changes to walking 3rd person mode
         else if (!isSprinting)
@@ -160,7 +163,7 @@ public class PlayerController : MonoBehaviour
             
             //put if(direction.magnitude > 0.1f) to make the player not rotate while standing still.
             transform.rotation = Quaternion.Euler(0f, _angle, 0f);
-            cc.Move(speed * Time.deltaTime * _moveDir.normalized);
+            cc.Move(speed * Time.deltaTime * _moveDir);
         }
         //Changes to sprinting 3rd person mode
         else if(isSprinting)
@@ -176,7 +179,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(0f, _angle, 0f);
                 _moveDir = Quaternion.Euler(0f, _targetAngle, 0f) * Vector3.forward;
-                cc.Move(speed * Time.deltaTime * _moveDir.normalized);
+                cc.Move(speed * Time.deltaTime * _moveDir);
             }
         }
         
@@ -220,5 +223,22 @@ public class PlayerController : MonoBehaviour
         {
             _psScript.RegenerateStamina();
         }
+    }
+    
+    Vector3 a = Vector3.zero;
+    Vector3 b = Vector3.zero;
+    float t = 0f;
+    public Vector3 GetAxis(Vector3 lastFrame, Vector3 thisFrame)
+    {
+        //How fast the acceleration and deceleration is
+        float gravity = 8.5f;
+        if (lastFrame != thisFrame)
+        {
+            a = lastFrame;
+            b = thisFrame;
+            t = 0f;
+        }
+        t += gravity * Time.deltaTime;
+        return Vector3.Lerp(a, b, t);
     }
 }
