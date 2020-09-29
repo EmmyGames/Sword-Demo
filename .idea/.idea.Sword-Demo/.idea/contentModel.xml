@@ -11,7 +11,9 @@
           <e p="BlockStart.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
           <e p="DamageEffect.cs" t="Include" />
+          <e p="EnemyController.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
           <e p="ObjectStats.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
