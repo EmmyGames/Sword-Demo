@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class ObjectStats : MonoBehaviour
 {
-    public int health;
+    public float health;
+    public float stamina;
 }

@@ -89,8 +89,9 @@ public class PlayerController : MonoBehaviour
 
         //shouldMove is set in the animator based on the enter and exit of the attacking animation
         //Make the player not able to move while attacking
-        if (_anim.GetBool(_shouldMove) && !PauseMenu.IsPaused)
-            _movement.EntityMovement(_isGrounded, isSprinting, Input.GetButton("Jump"), cam, _startCamRotation, _direction);
+        if (!_anim.GetBool(_shouldMove) || PauseMenu.IsPaused)
+            _direction = Vector3.zero;
+        _movement.EntityMovement(_isGrounded, isSprinting, Input.GetButton("Jump"), cam, _startCamRotation, _direction);
     }
     
     private void Animate()
@@ -113,6 +114,9 @@ public class PlayerController : MonoBehaviour
             _psScript.ChunkStamina(10f);
         else if (_anim.GetBool(_isBlocking))
             _psScript.DrainStamina();
+        //Don't regen stamina while sprinting but don't take any away either
+        else if (_anim.GetBool(_isSprinting))
+            _psScript.ChunkStamina(0f);
         else
             _psScript.RegenerateStamina();
     }

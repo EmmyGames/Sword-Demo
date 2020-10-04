@@ -20,12 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e470174a-9126-4174-972c-c53c6e17fb9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Walk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/YBot Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/YBot Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/block_out.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/block_out.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamageEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DamageEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,13 +52,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DamageEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       </list>
     </option>
@@ -105,6 +111,10 @@
       <workItem from="1601235566291" duration="5657000" />
       <workItem from="1601305482466" duration="498000" />
       <workItem from="1601397284730" duration="10734000" />
+      <workItem from="1601503986156" duration="220000" />
+      <workItem from="1601570380484" duration="6439000" />
+      <workItem from="1601832209020" duration="1336000" />
+      <workItem from="1601833595347" duration="10356000" />
     </task>
     <servers />
   </component>
@@ -141,5 +151,9 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1287" y="0" width="1294" height="1407" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@-2560.0.2560.1400" timestamp="1601408455844" />
+    <state x="-1617" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601841056148">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1617" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-2560.0.2560.1400@-2560.0.2560.1400" timestamp="1601841056148" />
   </component>
 </project>

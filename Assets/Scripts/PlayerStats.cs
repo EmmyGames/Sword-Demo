@@ -5,17 +5,15 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private PlayerController _pcScript;
-    
     public float health = 100f;
-    public float stamina = 100f;
+    public float stamina;
     public float passiveRegen;
-    private float _staminaMax = 100f;
+    public float staminaMax = 100f;
     private float _regenCooldown = 0f;
 
     private void Start()
     {
-        _pcScript = GetComponent<PlayerController>();
+        stamina = staminaMax;
     }
 
     public void TakeDamage()
@@ -40,7 +38,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (_regenCooldown > 0f)
             _regenCooldown -= Time.deltaTime;
-        if (stamina < _staminaMax && _regenCooldown <= 0f)
+        if (stamina < staminaMax && _regenCooldown <= 0f)
             stamina += passiveRegen * Time.deltaTime;
     }
 }
