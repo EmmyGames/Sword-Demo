@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SwordCollision : MonoBehaviour
 {
-    public Animator _anim;
+    public Animator anim;
     
     public float lightDamage;
     public float heavyDamage;
@@ -23,9 +23,9 @@ public class SwordCollision : MonoBehaviour
 
     private void Update()
     {
-        if (_anim.GetBool(_isAttacking))
+        if (anim.GetBool(_isAttacking))
             attackDamage = lightDamage;
-        if (_anim.GetBool(_isAttacking2))
+        if (anim.GetBool(_isAttacking2))
             attackDamage = heavyDamage;
     }
 
@@ -48,12 +48,12 @@ public class SwordCollision : MonoBehaviour
             if (stats.health <= 0)
             {
                 stats.score++;
-                StartCoroutine(Nextfight());
+                StartCoroutine(NextFight());
             }
         }
     }
 
-    IEnumerator Nextfight()
+    IEnumerator NextFight()
     {
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

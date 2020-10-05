@@ -14,11 +14,13 @@
           <e p="DamageEffect.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
           <e p="ObjectStats.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
+          <e p="ResetScore.cs" t="Include" />
           <e p="SlashBehavior.cs" t="Include" />
           <e p="SpawnRandomEnemy.cs" t="Include" />
           <e p="SwordCollision.cs" t="Include" />

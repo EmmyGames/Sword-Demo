@@ -21,15 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e470174a-9126-4174-972c-c53c6e17fb9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sword-Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamageEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DamageEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy 1 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy 1 Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/save.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/save.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +43,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResetScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnRandomEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,7 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
@@ -59,9 +59,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnRandomEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/save.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwordCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResetScore.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +120,7 @@
       <workItem from="1601570380484" duration="6439000" />
       <workItem from="1601832209020" duration="1336000" />
       <workItem from="1601833595347" duration="10356000" />
-      <workItem from="1601856843273" duration="7065000" />
+      <workItem from="1601856843273" duration="8639000" />
     </task>
     <servers />
   </component>
@@ -154,6 +157,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="0" y="0" width="2308" height="1387" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@-2560.0.2560.1400" timestamp="1601862501668" />
+    <state x="0" y="0" width="2308" height="1387" key="dock-window-2" timestamp="1601867604720">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="0" y="0" width="2308" height="1387" key="dock-window-2/0.0.2560.1400/-2560.0.2560.1400@-2560.0.2560.1400" timestamp="1601867604720" />
     <state x="-1617" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601841056148">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>

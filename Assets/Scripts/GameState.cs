@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
@@ -36,6 +37,10 @@ public class GameState : MonoBehaviour
         enemyStaminaText.text = "Stamina: " + Math.Floor(_enemyScript.stamina / _enemyScript.staminaMax * 100) + "%";
         //score is actually the number of deaths so it's backwards.
         score.text = _enemyScript.score + " - " + psScript.score;
+        if (_enemyScript.score >= 3)
+            SceneManager.LoadScene("Win");
+        if(psScript.score >= 3)
+            SceneManager.LoadScene("Lose");
         Save();
     }
     

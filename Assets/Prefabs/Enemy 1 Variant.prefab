@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d0fad2832c1874eaa94a692eb33e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anim: {fileID: 6417756492766747951}
+  anim: {fileID: 6417756492766747951}
   lightDamage: 10
   heavyDamage: 20
   attackDamage: 0
