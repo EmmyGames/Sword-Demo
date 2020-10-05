@@ -6,6 +6,7 @@
     <e p="D:\Documents - data drive\GitHub\Repositories\Sword-Demo" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="save.txt" t="Include" />
         <e p="Scripts" t="Include">
           <e p="BlockEnd.cs" t="Include" />
           <e p="BlockStart.cs" t="Include" />
@@ -19,6 +20,7 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
           <e p="SlashBehavior.cs" t="Include" />
+          <e p="SpawnRandomEnemy.cs" t="Include" />
           <e p="SwordCollision.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

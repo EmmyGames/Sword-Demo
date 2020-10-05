@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwordCollision : MonoBehaviour
 {
@@ -40,12 +41,21 @@ public class SwordCollision : MonoBehaviour
         {
             attackDamage = 0f;
         }
-        else if (other.CompareTag("Player"))
+        else if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
             PlayerStats stats = other.GetComponent<PlayerStats>();
             stats.health -= attackDamage;
+            if (stats.health <= 0)
+            {
+                stats.score++;
+                StartCoroutine(Nextfight());
+            }
         }
+    }
 
-        
+    IEnumerator Nextfight()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

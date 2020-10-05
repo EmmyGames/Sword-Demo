@@ -10,12 +10,4 @@ public class DamageEffect : MonoBehaviour
     {
         _stats = GetComponent<PlayerStats>();
     }
-
-    private void Update()
-    {
-        if (_stats.health <= 0)
-        {
-            Destroy(this.gameObject, 1);
-        }
-    }
 }

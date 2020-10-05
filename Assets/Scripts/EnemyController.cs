@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     private Movement _movement;
     private Animator _anim;
     private PlayerStats _psScript;
-    public Transform playerTransform;
+    private Transform _playerTransform;
 
     //Movement
     private Vector3 _direction;
@@ -48,11 +48,12 @@ public class EnemyController : MonoBehaviour
     
     private void Start()
     {
-        _startRotation = transform.eulerAngles.y;
+        _startRotation = 0f;
         
         _movement = GetComponent<Movement>();
         _anim = GetComponent<Animator>();
         _psScript = GetComponent<PlayerStats>();
+        _playerTransform = GameObject.Find("Player").transform;
         
         _isSprinting = Animator.StringToHash("isSprinting");
         _isJumping = Animator.StringToHash("isJumping");
@@ -90,11 +91,11 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyDecision()
     {
-        float deltaX = playerTransform.position.x - transform.position.x;
-        float deltaZ = playerTransform.position.z - transform.position.z;
+        float deltaX = _playerTransform.position.x - transform.position.x;
+        float deltaZ = _playerTransform.position.z - transform.position.z;
         float theta = Mathf.Atan2(deltaX, deltaZ) * Mathf.Rad2Deg; //TODO: add random offset (but don't update it that often)
         transform.rotation = Quaternion.Euler(0f, theta, 0f);
-        _distance = Vector3.Distance(playerTransform.position, transform.position);
+        _distance = Vector3.Distance(_playerTransform.position, transform.position);
 
         if (_distance < attackRadius && _distance > 1f && state != State.Attack && state != State.HeavyAttack)
         {
@@ -110,9 +111,9 @@ public class EnemyController : MonoBehaviour
             
             if (isSprinting)
                 _direction = Vector3.forward;
-            else if (_distance > 1f && _distance < sprintRadius)
+            else if (_distance > 1.2f && _distance < sprintRadius)
                 _direction = new Vector3(Random.Range(-1, 2), 0f, Random.Range(0, 2)).normalized;
-            else if(_distance < 1f)
+            else if(_distance < 1.2f)
                 _direction = new Vector3(Random.Range(-1, 2), 0f, -1).normalized;
             yield return new WaitForSeconds(0.25f);
         }
